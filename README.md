@@ -18,4 +18,27 @@ Here is what your updated architecture will look like upon completion of this pr
 __________
 
 ### INSTALL AND CONFIGURE JENKINS SERVER
+### Step 1 – Install the Jenkins server
+* Create an AWS EC2 server based on Ubuntu Server 20.04 LTS and name it "Jenkins server"
 
+  ![ec2](./images/ec2.png)
+
+* Install JDK (since Jenkins is a Java-based application)
+
+  `sudo apt update`
+   
+   ![update](./images/update.png)
+
+   `sudo apt install default-jdk-headless`
+
+   ![jdk](./images/jdk.png)
+
+* Install Jenkins
+  
+        wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+        sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
+            /etc/apt/sources.list.d/jenkins.list'
+        sudo apt update
+        sudo apt-get install jenkins
+
+* check if Jenkins is up and running. `sudo systemctl status jenkins`
