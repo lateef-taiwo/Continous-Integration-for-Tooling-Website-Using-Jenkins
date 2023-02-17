@@ -13,3 +13,9 @@ Enhance the architecture prepared in [the last project](https://github.com/latee
 Here is what your updated architecture will look like upon completion of this project:
 
 ![diagram](./images/Architecture.png)
+
+----------
+__________
+
+### INSTALL AND CONFIGURE JENKINS SERVER
+
