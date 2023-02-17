@@ -41,4 +41,4 @@ __________
         sudo apt update
         sudo apt-get install jenkins
 
-* check if Jenkins is up and running. `sudo systemctl status jenkins`
+* Check if Jenkins is up and running. `sudo systemctl status jenkins`
