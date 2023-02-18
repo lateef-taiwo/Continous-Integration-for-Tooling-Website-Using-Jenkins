@@ -128,3 +128,26 @@ By default, the artifacts are stored on the Jenkins server locally
 ---------
 _________
 ### CONFIGURE JENKINS TO COPY FILES TO NFS SERVER VIA SSH
+Now we have our artifacts saved locally on Jenkins server, the next step is to copy them to our NFS server to /mnt/apps directory.
+Jenkins is a highly extendable application and there are 1400+ plugins available. We will need a plugin that is called "Publish Over SSH".
+
+1. Install the "Publish Over SSH" plugin. On the main dashboard select "Manage Jenkins" and choose the "Manage Plugins" menu item.
+On the "Available" tab search for the "Publish Over SSH" plugin and install it.
+
+![manage](./images/manage.png)
+![manage](./images/publish%20over%20ssh%20plugin.png)
+
+* Configure the job/project to copy artifacts over to the NFS server.
+On the main dashboard select "Manage Jenkins" and choose the "Configure System" menu item.
+Scroll down to Publish over the SSH plugin configuration section and configure it to be able to connect to your NFS server:
+
+  * Provide a private key (the content of .pem file that you use to connect to the NFS server via SSH/Putty)
+  * Arbitrary name
+
+  * Hostname – can be private IP address of your NFS server
+
+  * Username – ec2-user (since the NFS server is based on EC2 with RHEL 8)
+
+  * Remote directory – /mnt/apps since our Web Servers use it as a mounting point to retrieve files from the NFS server
+
+
