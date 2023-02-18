@@ -103,3 +103,28 @@ Click the "Build Now" button, if you have configured everything correctly, the b
   
   ![console](./images/console%20output.png)
 
+* Click "Configure" your job/project and add these two configurations
+
+   * Configure triggering the job from the GitHub webhook:
+   ![git](./images/gitscm.png)
+
+  * Configure "Post-build Actions" to archive all the files – files resulting from a build are called "artifacts".
+
+   ![git](./images/arrtifact.png)
+
+* Now, go ahead and make some changes in any file in your GitHub repository (e.g. README.MD file) and push the changes to the master branch.
+You will see that a new build has been launched automatically (by webhook) and you can see its results – artifacts, saved on the Jenkins server.
+
+  ![build](./images/build%202.png)
+
+  ![build](./images/build%20artifact.png)
+
+* You have now configured an automated Jenkins job that receives files from GitHub by webhook trigger (this method is considered as ‘push’ because the changes are being ‘pushed’ and file transfer is initiated by GitHub). There are also other methods: trigger one job (downstream) from another (upstream), poll GitHub periodically and others.
+By default, the artifacts are stored on the Jenkins server locally
+
+   `ls /var/lib/jenkins/jobs/tooling_github/builds/<build_number>/archive/`
+
+  ![archive](./images/archive.png)
+---------
+_________
+### CONFIGURE JENKINS TO COPY FILES TO NFS SERVER VIA SSH
