@@ -82,6 +82,8 @@ Here, I will configure a simple Jenkins job/project (these two terms can be used
 
   ![web hook](./images/webhook.png)
 
+  ![web hook](./images/webhook2.png)
+
 * Go to Jenkins web console, click "New Item" and create a "Freestyle project"
 
   ![free style](./images/free%20style.png)
@@ -113,11 +115,14 @@ Click the "Build Now" button, if you have configured everything correctly, the b
    ![git](./images/arrtifact.png)
 
 * Now, go ahead and make some changes in any file in your GitHub repository (e.g. README.MD file) and push the changes to the master branch.
-You will see that a new build has been launched automatically (by webhook) and you can see its results – artifacts, saved on the Jenkins server.
 
   ![build](./images/build%202.png)
 
-  ![build](./images/build%20artifact.png)
+* You will see that a new build has been launched automatically (by webhook) and you can see its results – artifacts, saved on the Jenkins server.
+
+  ![trigger](./images/triggered.png)
+
+  ![build](./images/build.png)
 
 * You have now configured an automated Jenkins job that receives files from GitHub by webhook trigger (this method is considered as ‘push’ because the changes are being ‘pushed’ and file transfer is initiated by GitHub). There are also other methods: trigger one job (downstream) from another (upstream), poll GitHub periodically and others.
 By default, the artifacts are stored on the Jenkins server locally
