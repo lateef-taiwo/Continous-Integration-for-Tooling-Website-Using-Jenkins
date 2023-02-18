@@ -64,6 +64,12 @@ You will be prompted to provide a default admin password.
    
    ![plugin](./images/plugin%20install.png)
 
-* Once plugin installation is done – create an admin user and you will get your Jenkins server address. The installation is completed!
+* Once plugin installation is done – create an admin user and you will get your Jenkins server address (url), then click save and finish. The installation is completed!
+
+![user](./images/user.png)
+
+![installed](./images/installed.png)
+
+![complete](./images/complete.png)
 
 
