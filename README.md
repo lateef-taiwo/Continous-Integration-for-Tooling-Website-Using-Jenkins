@@ -53,4 +53,17 @@ __________
    ![sec group](./images/sec%20groups.png)
 
 * Perform initial Jenkins setup.
+From your browser access `http://<Jenkins-Server-Public-IP-Address-or-Public-DNS-Name>:8080`.
+You will be prompted to provide a default admin password.
+
+ ![jenkins](./images/jenkins%20installed.png)
+  
+ ![pass](./images/pass.png)
+
+* Then you will be asked which plugings to install – choose suggested plugins.
+   
+   ![plugin](./images/plugin%20install.png)
+
+* Once plugin installation is done – create an admin user and you will get your Jenkins server address. The installation is completed!
+
 
