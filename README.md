@@ -46,3 +46,11 @@ __________
    ![install](./images/install%20jenkins.png)
 
 * Check if Jenkins is up and running. `sudo systemctl status jenkins`
+  ![systemctl](./images/systemctl.png)
+
+* By default Jenkins server uses TCP port 8080 – open it by creating a new Inbound Rule in your EC2 Security Group.
+
+   ![sec group](./images/sec%20groups.png)
+
+* Perform initial Jenkins setup.
+
