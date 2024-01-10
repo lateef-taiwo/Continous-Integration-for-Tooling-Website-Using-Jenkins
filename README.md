@@ -128,7 +128,7 @@ Click the "Build Now" button, if you have configured everything correctly, the b
 * You have now configured an automated Jenkins job that receives files from GitHub by webhook trigger (this method is considered as ‘push’ because the changes are being ‘pushed’ and file transfer is initiated by GitHub). There are also other methods: trigger one job (downstream) from another (upstream), poll GitHub periodically and others.
 By default, the artifacts are stored on the Jenkins server locally
 
-   `ls /var/lib/jenkins/jobs/tooling_github/builds/<build_number>/archive/`
+   `ls /var/lib/jenkins/jobs/tooling.github/builds/<build_number>/archive/`
 
   ![archive](./images/archive.png)
 ---------
